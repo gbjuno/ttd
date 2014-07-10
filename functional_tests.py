@@ -4,6 +4,7 @@ from selenium.webdriver.common.keys import Keys
 import unittest
 import time
 
+
 class NewVisitorTest(unittest.TestCase):  #
 
     def setUp(self):  #
@@ -38,8 +39,7 @@ class NewVisitorTest(unittest.TestCase):  #
 
         inputbox.send_keys('Buy peacock feathers')
         inputbox.send_keys(Keys.ENTER)
-
-
+        
         self.check_for_row_in_list_table('1: Buy peacock feathers')
         
         inputbox = self.browser.find_element_by_id('id_new_item')
